@@ -1,0 +1,12 @@
+export RUNNER='SELENIUM'
+export SAUCE_USERNAME='zuppler'
+export SAUCE_ACCESS_KEY='f0776e72-dec2-4f56-9f1a-3f87f88a32f5'
+
+if [ -f "$rvm_path/scripts/rvm" ] && [ -f ".ruby-version" ]; then
+  source "$rvm_path/scripts/rvm"
+  if [ -f ".ruby-gemset" ]; then
+    rvm use `cat .ruby-version`@`cat .ruby-gemset`
+  else
+    rvm use `cat .ruby-version`
+  fi
+fi
